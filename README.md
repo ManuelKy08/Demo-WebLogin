@@ -19,6 +19,11 @@
 <a href="https://freeimage.host/i/2iGNsEJ"><img src="https://iili.io/2iGNsEJ.md.png" alt="2iGNsEJ.md.png" border="0"></a>
 <a href="https://freeimage.host/i/2iGryjR"><img src="https://iili.io/2iGryjR.md.jpg" alt="2iGryjR.md.jpg" border="0"></a>
 
+## pip instal
+pake flask
+```
+pip3 install flask --break-system-packages
+```
 ## Logs
 ```
 ┌──[root@parrot][/home/rrsec/Dokumen/toko-kokok/phising-buatan]root
