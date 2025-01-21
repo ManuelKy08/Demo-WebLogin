@@ -1,0 +1,84 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0a192f; /* Background gelap */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Menghindari scroll */
+  position: relative; /* Untuk posisi absolute elemen tulisan */
+}
+
+.login-container, .verify-container {
+  background: rgba(255, 255, 255, 0.1); /* Transparan */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  text-align: center;
+  width: 350px;
+  position: relative; /* Untuk z-index agar di atas background */
+  z-index: 1; /* Agar di atas tulisan background */
+}
+
+.login-container h2, .verify-container h2 {
+  margin-bottom: 30px;
+  color: #fff; /* Warna teks putih */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #eee; /* Warna label */
+  font-size: 0.9em;
+}
+
+.form-group input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.05); /* Latar belakang input transparan */
+  color: #fff; /* Warna teks input */
+}
+
+.login-btn {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #4cae4c;
+}
+
+/* Efek Cahaya untuk Tulisan "kikikokok" */
+.kiki-text {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.1); /* Warna teks transparan */
+    font-size: 12px; /* Ukuran teks */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efek cahaya */
+    white-space: nowrap; /* Mencegah teks wrap */
+    animation: moveText 20s linear infinite;
+}
+
+/* Animasi untuk tulisan */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

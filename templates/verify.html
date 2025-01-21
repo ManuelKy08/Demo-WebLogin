@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Code</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="verify-container">
+    <h2>OTP 6 Digit di sms luu!</h2>
+    <form method="post">
+      <div class="form-group">
+        <label for="code">6 angkaa</label>
+        <input type="text" id="code" name="code" pattern="[0-9]{6}" required placeholder="123456">
+      </div>
+      <button type="submit" class="login-btn">Verify</button>
+    </form>
+  </div>
+    <script>
+      // Membuat tulisan "kikikokok"
+      function createKikiText() {
+          const kikiText = document.createElement('div');
+          kikiText.classList.add('kiki-text');
+          kikiText.textContent = 'kikikokok';
+          kikiText.style.top = Math.random() * 100 + 'vh';
+           kikiText.style.left = Math.random() * 100 + 'vw';
+          kikiText.style.animationDelay = Math.random() * 5 + 's';
+          document.body.appendChild(kikiText);
+        }
+
+      for (let i = 0; i < 10; i++) {
+        createKikiText();
+      }
+       setInterval(createKikiText, 1000)
+    </script>
+</body>
+</html>

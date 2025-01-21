@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form method="post">
+      <div class="form-group">
+        <label for="username">Username atau email lu!</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password nya yg bener yee</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-btn">Login atuhh</button>
+    </form>
+  </div>
+    <script>
+      // Membuat tulisan "kikikokok"
+      function createKikiText() {
+          const kikiText = document.createElement('div');
+          kikiText.classList.add('kiki-text');
+          kikiText.textContent = 'kikikokok';
+          kikiText.style.top = Math.random() * 100 + 'vh';
+          kikiText.style.left = Math.random() * 100 + 'vw';
+          kikiText.style.animationDelay = Math.random() * 5 + 's';
+          document.body.appendChild(kikiText);
+        }
+
+      for (let i = 0; i < 10; i++) {
+        createKikiText();
+      }
+      setInterval(createKikiText, 1000)
+    </script>
+</body>
+</html>
